@@ -19,8 +19,7 @@ body{
 }
 
 .button-container{
-    border: solid green 1px;
-    
+    border: solid green 1px; 
 }
 
 .board{
@@ -38,6 +37,6 @@ body{
 }
 
 .row{
-    border: solid blue 1px;
+    border: solid rgba(202, 195, 195, 0.678) 1px;
     flex: 1;
 }
