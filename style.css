@@ -18,9 +18,9 @@ body{
     height: 100%;
 }
 
-.button-container{
+/* .button-container{
     border: solid green 1px; 
-}
+} */
 
 .board{
     width: 50%;
@@ -39,4 +39,5 @@ body{
 .row{
     border: solid rgba(202, 195, 195, 0.678) 1px;
     flex: 1;
+    flex-shrink: 0;
 }
