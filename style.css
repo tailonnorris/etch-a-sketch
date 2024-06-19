@@ -18,9 +18,13 @@ body{
     height: 100%;
 }
 
-/* .button-container{
+.button-container{
     border: solid green 1px; 
-} */
+}
+
+.button-container button{
+    padding: 4px 50px;
+}
 
 .board{
     width: 50%;

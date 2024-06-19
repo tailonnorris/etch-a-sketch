@@ -1,15 +1,22 @@
 let board = document.querySelector(".board");
 let setSize = document.querySelector(".btnSize");
-let color = 'black';
+let rgbColor = document.querySelector(".rgb");
+let rgbOn = false;
+let color ;
 
 document.addEventListener("DOMContentLoaded", ()=>{
   createBoard(10);
 });
 
+rgbColor.addEventListener("click", ()=> {
+  rgbOn == true ? rgbOn = false : rgbOn = true;
+  console.log(rgbOn);
+});
+
 setSize.addEventListener("click", ()=>{
   let boardSize = prompt("Por favor digite la dimension del tablero");
 
-  if (boardSize > 100 || boardSize <= 0 || board == undefined){
+  if (boardSize > 100 || boardSize <= 0 || boardSize == ''){
     boardSize = prompt("Por favor digite un numero entre 1 y 100");
   };
 
@@ -38,7 +45,15 @@ function createBoard(size){
 };
 
 function drawing (square){
-  square.style.backgroundColor = color;
+  if(rgbOn == true){
+    color = rgb();
+    console.log(color);
+    square.style.backgroundColor = `rgb(${color})`;
+  }else{
+    square.style.backgroundColor = `Black`;
+
+  }
+  
 };
 
 function resetBoard(){
@@ -46,5 +61,16 @@ function resetBoard(){
   for (const cell of boardCells){
     cell.remove();
   };
-  console.log(board)
+};
+
+function rgb(){
+  let r = randomInteger(255);
+  let g = randomInteger(255);
+  let b = randomInteger(255);
+
+  return [r,g,b];
+};
+
+function randomInteger(max){
+  return Math.floor(Math.random()*(max+1));
 };
