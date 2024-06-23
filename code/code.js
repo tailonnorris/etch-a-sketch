@@ -5,7 +5,7 @@ let rgbOn = false;
 let color ;
 
 document.addEventListener("DOMContentLoaded", ()=>{
-  createBoard(10);
+  createBoard(32);
 });
 
 rgbColor.addEventListener("click", ()=> {

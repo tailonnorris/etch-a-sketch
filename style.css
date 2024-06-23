@@ -19,7 +19,13 @@ body{
 }
 
 .button-container{
-    border: solid green 1px; 
+    width: 40%;
+    padding: 6px ;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 
 .button-container button{
